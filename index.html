@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Token page</title>
+	<meta name="description" content="A token page for ERC20 Token">
+	<meta name="author" content="sunwrt">
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Bootstrap files -->
+  <!-- <script src="./app.js"></script> -->
+
+  <!-- Latest compiled and minified CSS -->
+	<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"> -->
+
+	<style>
+		body {
+			padding-top: 50px;
+		}
+	</style>
+</head>
+<body data-spy="scroll" data-target="#main-navbar">
+
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a href="index.html" class="navbar-brand">QuestionBox</a>
+			</div> <!-- end navbar-header -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#section-tokendetail">代币详述</a></li>
+					<li><a href="#section-userinfo">用户信息</a></li>
+					<li><a href="#section-tokenmanagement">代币管理</a></li>
+				</ul>
+			</div> <!-- end collapse -->
+		</div> <!-- end container -->
+	</nav>
+
+	<!-- BANNER -->
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>QuestionBox代币</h1>
+			<p>QuestionBox - 一种ERC20代币</p>
+
+		</div> <!-- end container -->
+	</div> <!-- end jumbotron -->
+
+	<div class="container">
+  
+		<!-- TOKENDETAIL -->
+		<section>
+			<div class="page-header" id="section-tokendetail">
+				<h2>代币详细描述. <small>代币类型、符号以及发行总量</small></h2>
+			</div> <!-- end page-header -->
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel panel-default text-center">
+						<div class="panel-body">
+
+							<h4>代币类型</h4>
+							<p id='token_type'>???ERC20</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel panel-default text-center">
+						<div class="panel-body">
+
+							<h4>代币符号</h4>
+							<p id='token_symbol'>???QuestionBox</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel panel-default text-center">
+						<div class="panel-body">
+
+							<h4>代币发行总量</h4>
+							<p id='token_total'>???1,000,000</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- end row -->
+
+		</section>
+
+    <!-- USERINFO -->
+		<section>
+			<div class="page-header" id="section-userinfo">
+				<h2>用户信息. <small>当前用户的各种信息</small></h2>
+			</div> <!-- end page-header -->
+
+			<div class="row">
+				<div class="panel panel-default panel-info">
+          <div class="panel-heading"><h4 class="panel-title">当前用户</h4></div>
+  
+          <!-- <div class="panel-body">
+          </div> -->
+        
+          <ul class="list-group">
+            <li class="list-group-item"><h4>代币数：<span id="token_balance">1234</span></h4></li>
+            <li class="list-group-item"><h4>以太币：<span id="ether_balance">1234</span></h4></li>
+            <li class="list-group-item"><h4>账号地址：<span id="token_address">0x13443444</span></h4></li>
+          </ul>
+  
+          <div class="panel-footer">各种信息</div>
+        </div>
+				
+			</div> <!-- end row -->
+
+    </section>
+
+    <!-- TOKENUSER -->
+		<section>
+			<div class="page-header" id="section-tokenuser">
+				<h2>代币用户. <small>全部代币用户的各种信息</small></h2>
+			</div> <!-- end page-header -->
+
+			<div class="row">
+				<div class="panel panel-default panel-warning">
+          <div class="panel-heading"><h4 class="panel-title">代币用户</h4></div>
+  
+          <!-- <div class="panel-body">
+          </div> -->
+        
+          <ul class="list-group" id="tokenuser-group">
+            <li class="list-group-item">0x12345678<span class="badge">123</span></li>
+            <li class="list-group-item">0x12345678<span class="badge">25</span></li>
+          </ul>
+
+          <div class="panel-footer">代币用户</div>
+        </div>
+				
+			</div> <!-- end row -->
+
+    </section>
+
+		<!-- TOKENMANAGEMENT -->
+		<section>
+			<div class="page-header" id="section-tokenmanagement">
+				<h2>代币管理. <small>发送代币和核准代币限额</small></h2>
+			</div> <!-- end page-header -->
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">发送代币</div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="inputAmountSendToken">代币数量</label>
+                  <input type="number" name="inputAmountSendToken" class="form-control" id="inputAmountSendToken" placeholder="例如：28">
+                </div>
+                <div class="form-group">
+                  <label for="inputBeneficiarySendToken">接收地址</label>
+                  <input type="text" class="form-control" id="inputBeneficiarySendToken" name="inputBeneficiarySendToken" placeholder="例如： 0x123ABde44...">
+                </div>
+                <button type="button" class="btn btn-default btn-primary" onclick="App.sendToken(); return false;">
+                  发送代币
+                </button>
+              </form>
+            </div>
+						<div class="panel-footer">直接地发送代币，从你的地址到接收方地址.</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel panel-default">
+            <div class="panel-heading">同意代币限额</div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="inputAmountAllowanceToken">代币数量</label>
+                  <input type="number" name="inputAmountAllowanceToken" class="form-control" id="inputAmountAllowanceToken" placeholder="例如：88">
+                </div>
+                <div class="form-group">
+                  <label for="inputBeneficiaryAllowanceToken">接收地址</label>
+                  <input type="text" class="form-control" id="inputBeneficiaryAllowanceToken" name="inputBeneficiaryAllowanceToken" placeholder="例如： 0x123ABde44...">
+                </div>
+                <button type="button" class="btn btn-default btn-primary" onclick="App.allowanceToken();return false;">同意代币转出
+                </button>
+              </form>
+            </div>
+						<div class="panel-footer">准许未来该地址可以从你的地址转出一定数量的代币.
+                        </div>
+					</div>
+				</div>
+				
+			</div> <!-- end row -->
+
+		</section>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="container text-center">
+
+				<div>
+		            <h3>Status from our Javascript</h3>
+	    	        <span id="token_tx_status"></span>
+		        </div>
+
+				<hr>
+
+				<ul class="list-inline">
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+				</ul>
+
+				<p>&copy; Copyright 2018.</p>
+			</div> <!-- end container -->
+
+		</footer>
+	</div> <!-- end container -->
+
+	<!-- Latest compiled and minified JavaScript -->
+	<!-- <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> -->
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <script src="./app.js"></script>
+
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+        App.initManageToken();
+    });
+</script>
+
+</body>
+</html>
